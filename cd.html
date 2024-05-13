@@ -1,0 +1,131 @@
+<html> 
+<head> 
+ <title>Linux Interactive</title> 
+ <style> 
+ body { 
+ margin: 0px; 
+ font-family: 'Times New Roman', Times, serif; 
+ } 
+ .background-clip { 
+ position: absolute; 
+ right: 0; 
+ bottom: 0; 
+ z-index: -1; 
+ } 
+ @media (min-aspect-ratio:16/9) { 
+ .background-clip { 
+ width: 100%; 
+ height: auto; 
+ } 
+ } 
+ @media (max-aspect-ratio:16/9) { 
+ .background-clip { 
+ width: auto; 
+ height: 100%; 
+ } 
+ } 
+ .header { 
+ height: 70px; 
+ background-color: black; 
+ color: white; 
+ padding: 4px 0px 4px 0px; 
+ } 
+ .vnav {
+background-color: black; 
+ display: flex; 
+ flex-direction: column; 
+ width: 200px; 
+ height: 100%; 
+ } 
+ .vnav a { 
+ font-size: 20px; 
+ text-decoration: none; 
+ color: white; 
+ } 
+ .vnav div { 
+ border: solid 0.1px white; 
+ background-color: black; 
+ transition: 0.3s ease; 
+ padding: 10px; 
+ } 
+ .vnav div:hover { 
+ background-color: purple; 
+ } 
+ .content { 
+ body { 
+ font-family: 'Times New Roman', Times, serif; 
+ margin: 0; 
+ padding: 0; 
+ } 
+ header { 
+ background-color: #333; 
+ color: white; 
+ padding: 10px; 
+ } 
+ main {
+padding: 20px; 
+ } 
+ #terminal-container { 
+ position: relative; 
+ width: 100%; 
+ height: 300px; 
+ border: 1px solid #ccc; 
+ } 
+ #terminal { 
+ position: absolute; 
+ top: 0; 
+ left: 0; 
+ width: 100%; 
+ height: 100%; 
+ background: black; 
+ color: green; 
+ padding: 10px; 
+ font-size: 14px; 
+ overflow: auto; 
+ white-space: pre-wrap; 
+ box-sizing: border-box; 
+ } 
+ } 
+ </style> 
+</head> 
+<body> 
+ <div class="header"> 
+ <h1 align="center">Linux Interactive</h1> 
+ </div> 
+ <div style="display: flex; height: 100%;"> 
+ <div class="vnav"> 
+ <center> 
+ <div><a href="home.html">Home</a></div> 
+ <div><a href="cmnds.html">Commands list</a></div> 
+ <div><a href="ls.html">List Directory</a></div> 
+ <div><a href="cd.html">Change Directory</a></div>
+ </center> 
+ </div> 
+ <div class="content"> 
+ <video autoplay loop muted plays-inline class="background-clip">  <source src="bg.mp4" type="video/mp4"> 
+ </video> 
+ <header> 
+ <h1>cd Command in Linux</h1> 
+ </header> 
+ <main style="background-color: white;"> 
+ <h2>Explanation</h2> 
+ <p> The cd command is commonly used to navigate between directories, access files  and directories 
+ located in different locations, and perform various file system operations.  <p>The cd command in Linux is another essential command-line utility used for  changing the current 
+ working directory. It stands for "change directory."</p> 
+ <p>When you execute the cd command followed by a directory name or path, it  changes the current working 
+ directory to the specified directory. If you don't specify a directory, it typically  takes you to 
+ your home directory. 
+ <p>It is often used to quickly view the contents of a directory, identify files and  directories, and 
+ navigate the file system.</p> 
+ </p> 
+ <h2>Example</h2>
+<p> 
+ Try running the `cd` command in the terminal emulator below:  </p> 
+ <div id="terminal-container"> 
+ <div id="terminal"></div> 
+ </div> 
+ </main> 
+ </div> 
+ </div> 
+</body> 
+</html>

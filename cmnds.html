@@ -1,0 +1,192 @@
+<html> 
+<head> 
+ <title>Linux Interactive</title> 
+ <style> 
+ body { 
+ margin: 0px; 
+ font-family: 'Times New Roman', Times, serif; 
+ } 
+ .background-clip { 
+ position: absolute; 
+ right: 0; 
+ bottom: 0; 
+ z-index: -1; 
+ } 
+ @media (min-aspect-ratio:16/9) { 
+ .background-clip { 
+ width: 100%; 
+ height: auto; 
+ } 
+ } 
+ @media (max-aspect-ratio:16/9) { 
+ .background-clip { 
+ width: auto; 
+ height: 100%; 
+ } 
+ } 
+ .header { 
+ height: 70px; 
+ background-color: black; 
+ color: white; 
+ padding: 4px 0px 4px 0px; 
+ } 
+ .vnav { 
+ background-color: black;
+display: flex; 
+ flex-direction: column; 
+ width: 200px; 
+ height: 100%; 
+ } 
+ .vnav a { 
+ font-size: 20px; 
+ text-decoration: none; 
+ color: white; 
+ } 
+ .vnav div { 
+ border: solid 0.1px white; 
+ background-color: black; 
+ transition: 0.3s ease; 
+ padding: 10px; 
+ } 
+ .vnav div:hover { 
+ background-color: purple; 
+ } 
+ .content { 
+ body { 
+ font-family: 'Times New Roman', Times, serif; 
+ } 
+ table, 
+ th, 
+ tr { 
+ width: auto; 
+ height: auto; 
+ background-color: white; 
+ border-collapse: collapse; 
+ padding: 10px; 
+ border-color: black;
+border: solid 10px black; 
+ font-size: 16px; 
+ margin: auto; 
+ } 
+ td { 
+ color: white; 
+ background-color: black; 
+ padding: 5px; 
+ width: auto; 
+ height: auto; 
+ } 
+ } 
+ </style> 
+</head> 
+<body> 
+ <div class="header"> 
+ <h1 align="center">Linux Interactive</h1> 
+ </div> 
+ <div style="display: flex; height: 100%;"> 
+ <div class="vnav"> 
+ <center> 
+ <div><a href="home.html">Home</a></div> 
+ <div><a href="cmnds.html">Commands list</a></div> 
+ <div><a href="ls.html">List Directory</a></div> 
+ <div><a href="cd.html">Change Directory</a></div> 
+</center> 
+ </div> 
+ <div class="content"> 
+ <video autoplay loop muted plays-inline class="background-clip">  <source src="bg.mp4" type="video/mp4"> 
+ </video> 
+ <h1 style="background-color: white;">Linux Basic Commands</h1>  <table> 
+ <tr> 
+ <th>Command</th> 
+ <th>Description</th> 
+ <th>Usage</th> 
+ </tr> 
+ <tr> 
+ <td>ls</td> 
+ <td>The <code>ls</code> command lists information about files and directories  in the current 
+ directory.</td> 
+ <td><code>ls</code> or <code>ls -a</code> (to list all files, including hidden  ones)</td> 
+ </tr> 
+ <tr> 
+ <td>cd</td> 
+ <td>The <code>cd</code> command is used to change the current working  directory.</td> 
+ <td><code>cd directory_name</code></td> 
+ </tr> 
+ <tr> 
+ <td>mkdir</td> 
+ <td>The <code>mkdir</code> command creates a new directory.</td>  <td><code>mkdir directory_name</code></td> 
+ </tr> 
+ <tr> 
+ <td>touch</td> 
+ <td>The <code>touch</code> command is used to create an empty file or update  the timestamp of an 
+ existing file.</td> 
+ <td><code>touch file_name</code></td> 
+ </tr> 
+ <tr> 
+ <td>pwd</td>
+<td>The <code>pwd</code> command prints the current working directory.</td>  <td><code>pwd</code></td> 
+ </tr> 
+ <tr> 
+ <td>rm</td> 
+ <td>The <code>rm</code> command is used to remove files or directories.</td>  <td><code>rm file_name</code></td> 
+ </tr> 
+ <tr> 
+ <td>rmdir</td> 
+ <td>The <code>rmdir</code> command is used to remove empty  directories.</td> 
+ <td><code>rmdir directory_name</code></td> 
+ </tr> 
+ <tr> 
+ <td>chmod</td> 
+ <td>The <code>chmod</code> command is used to change file permissions.</td>  <td><code>chmod permissions file_name</code></td> 
+ </tr> 
+ <tr> 
+ <td>sudo</td> 
+ <td>The <code>sudo</code> command is used to execute commands with  elevated privileges.</td> 
+ <td><code>sudo command</code></td> 
+ </tr> 
+ <tr> 
+ <td>cp</td> 
+ <td>The <code>cp</code> command is used to copy files and directories.</td>  <td><code>cp source_file destination_file</code></td> 
+ </tr> 
+ <tr> 
+ <td>mv</td> 
+ <td>The <code>mv</code> command is used to move or rename files and  directories.</td> 
+ <td><code>mv source destination</code></td> 
+ </tr> 
+ <tr> 
+ <td>cat</td> 
+ <td>The <code>cat</code> command is used to concatenate and display the  content of files.</td> 
+ <td><code>cat file_name</code></td>
+ </tr> 
+ <tr> 
+ <td>clear</td> 
+ <td>The <code>clear</code> command is used to clear the terminal screen.</td>  <td><code>clear</code></td> 
+ </tr> 
+ <tr> 
+ <td>grep</td> 
+ <td>The <code>grep</code> command is used to search for patterns in text  files.</td> 
+ <td><code>grep pattern file_name</code></td> 
+ </tr> 
+ <tr> 
+ <td>less</td> 
+ <td>The <code>less</code> command is used to view the content of files one  page at a time.</td> 
+ <td><code>less file_name</code></td> 
+ </tr> 
+ <tr> 
+ <td>find</td> 
+ <td>The <code>find</code> command is used to search for files and directories  based on various 
+ criteria.</td> 
+ <td><code>find path options pattern</code></td> 
+ </tr> 
+ <tr> 
+ <td>tar</td> 
+ <td>The <code>tar</code> command is used to create, view, and extract files  from tar archives.</td> 
+ <td><code>tar options archive_name files</code></td> 
+ </tr> 
+ <tr> 
+ <td>zip</td> 
+ <td>The <code>zip</code> command is used to create, modify, and extract ZIP  archives.</td> 
+ <td><code>zip options archive_name files</code></td> 
+ </tr> 
+ </table> 
+</body> 
+</html>
