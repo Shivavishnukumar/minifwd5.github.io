@@ -1,0 +1,91 @@
+<html> 
+<head> 
+ <title>Linux Interactive</title> 
+ <style> 
+ body { 
+ margin: 0px; 
+ background-color: white; 
+ font-family: 'Times New Roman', Times, serif; 
+ } 
+ .background-clip { 
+ position: absolute; 
+ right: 0; 
+ bottom: 0; 
+ z-index: -1; 
+ } 
+ @media (min-aspect-ratio:16/9) { 
+ .background-clip { 
+ width: 100%; 
+ height: auto; 
+ } 
+ } 
+ @media (max-aspect-ratio:16/9) { 
+ .background-clip { 
+ width: auto; 
+ height: 100%; 
+ } 
+ } 
+ .header { 
+ height: 70px; 
+ background-color: black; 
+ color: white;	
+
+ padding: 4px 0px 4px 0px;
+} 
+ .vnav { 
+ background-color: black; 
+ display: flex; 
+ flex-direction: column; 
+ width: 200px; 
+ height: 100%; 
+ } 
+ .vnav a { 
+ font-size: 20px; 
+ text-decoration: none; 
+ color: white; 
+ } 
+ .vnav div { 
+ border: solid 0.1px white; 
+ background-color: black; 
+ transition: 0.3s ease; 
+ padding: 10px; 
+ } 
+ .vnav div:hover { 
+ background-color: purple; 
+ } 
+ .content { 
+ margin: auto; 
+ display: block; 
+ font-size: 35px; 
+ color: limegreen; 
+ border: solid; 
+ height: 500px; 
+ width: 1000px; 
+ background-color: black;
+}
+</style> 
+</head> 
+<body> 
+ <div class="header"> 
+ <h1 align="center">Linux Interactive</h1> 
+ </div> 
+ <div style="display: flex; height: 100%;"> 
+ <div class="vnav"> 
+ <center> 
+ <div><a href="home.html">Home</a></div> 
+ <div><a href="cmnds.html">Commands list</a></div> 
+ <div><a href="ls.html">List Directory</a></div> 
+ <div><a href="cd.html">Change Directory</a></div>
+ </center> 
+ </div> 
+ <div class="content"> 
+ <video autoplay loop muted plays-inline class="background-clip">  <source src="bg.mp4" type="video/mp4"> 
+ </video> 
+ <p><b>Linux Interactive </b> is a free tutorial designed to make it as easy as possible  to learn Linux. Even 
+ though 
+ Linux has hundreds of commands, there are only about a dozen you need to know to  perform most basic 
+ tasks.</p>
+</div> 
+ </div> 
+</body> 
+</html>
